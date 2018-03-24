@@ -393,10 +393,24 @@ Having built a functioning Webpack and Babel setup, it's time to bring what we'v
 
 There's nothing complicated in it. The main points to note are the `<ol></ol>` element, where the array of numbers will be going, and the `<script></script>` element just before the clogin `</body>` tag, linking back to the `./js/bundle.js` file. So far, so good.
 
-A little more JavaScript is needed to display the list though, so let's add that to the bottom of `./src/index.js`
+A little more JavaScript is needed to display the list though, so let's add that to the bottom of `./src/index.js`, and whilst we're at it, comment out the last two lines in the `index.js` file, as we no longer need those.
 
 ```js
+// const strSNos = serNos.map(sn => leftPad( sn, 8, '0' ) );
 
+// console.log( strSNos );
+
+const partEl = document.getElementById('part-list');
+
+console.log(partEl);
+
+let strList = "";
+
+serNos.forEach(element => {
+  strList += `<li>${ leftPad(element, 8, '0') }</li>`;
+});
+
+partEl.innerHTML = strList;
 ```
 
 - Create an index.html file
