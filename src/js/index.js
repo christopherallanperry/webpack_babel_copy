@@ -10,8 +10,6 @@ const serNos = [ 6934, 23111, 23114, 1001, 211161];
 
 const partEl = document.getElementById('part-list');
 
-console.log(partEl);
-
 let strList = "";
 
 serNos.forEach(element => {

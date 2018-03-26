@@ -1,6 +1,7 @@
-var path = require("path");
+const path = require("path");
 
 module.exports = {
+  mode: "development",
   entry: "./src/js/index.js",
   output: {
     path: path.resolve(__dirname, "public"),
@@ -21,3 +22,4 @@ module.exports = {
     ]
   }
 };
+
