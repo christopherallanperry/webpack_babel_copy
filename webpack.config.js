@@ -21,17 +21,6 @@ module.exports = {
             presets: ["babel-preset-env"]
           }
         }
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'index.html'
-            }
-          }
-        ]
       }
     ]
   }

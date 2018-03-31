@@ -1,10 +1,8 @@
 "use strict"
 
-require('file-loader?name=[name].[ext]!../index.html');
-
 import { leftPad } from "./leftpad_es6";
 
-const serNos = [ 6934, 23111, 23114, 1001, 211161, 'abc' ];
+const serNos = [ 6934, 23111, 23114, 1001, 211161, 'abc', 'xyz' ];
 
 // const strSNos = serNos.map(sn => leftPad( sn, 8, '0' ) );
 
