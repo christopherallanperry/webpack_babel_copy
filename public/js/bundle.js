@@ -71,6 +71,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./src/index.html":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./src/index.html ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"index.html\";\n\n//# sourceURL=webpack:///./src/index.html?./node_modules/file-loader/dist/cjs.js?name=%5Bname%5D.%5Bext%5D");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -79,7 +90,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _leftpad_es = __webpack_require__(/*! ./leftpad_es6 */ \"./src/js/leftpad_es6.js\");\n\nvar serNos = [6934, 23111, 23114, 1001, 211161];\n\n// const strSNos = serNos.map(sn => leftPad( sn, 8, '0' ) );\n\n// console.log( strSNos );\n\nvar partEl = document.getElementById('part-list');\n\nvar strList = \"\";\n\nserNos.forEach(function (element) {\n  strList += \"<li>\" + (0, _leftpad_es.leftPad)(element, 8, '0') + \"</li>\";\n});\n\npartEl.innerHTML = strList;\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("\n\nvar _leftpad_es = __webpack_require__(/*! ./leftpad_es6 */ \"./src/js/leftpad_es6.js\");\n\n__webpack_require__(/*! file-loader?name=[name].[ext]!../index.html */ \"./node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./src/index.html\");\n\nvar serNos = [6934, 23111, 23114, 1001, 211161, 'abc'];\n\n// const strSNos = serNos.map(sn => leftPad( sn, 8, '0' ) );\n\n// console.log( strSNos );\n\nvar partEl = document.getElementById('part-list');\n\nvar strList = '';\n\nserNos.forEach(function (element) {\n  strList += \"<li>\" + (0, _leftpad_es.leftPad)(element, 8, '0') + \"</li>\";\n});\n\npartEl.innerHTML = strList;\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 

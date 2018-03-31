@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
   mode: "development",
@@ -6,6 +6,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "js/bundle.js"
+  },
+  devServer: {
+    contentBase: "./public"
   },
   module: {
     rules: [
@@ -18,8 +21,18 @@ module.exports = {
             presets: ["babel-preset-env"]
           }
         }
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'index.html'
+            }
+          }
+        ]
       }
     ]
   }
 };
-

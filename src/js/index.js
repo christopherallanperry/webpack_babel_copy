@@ -1,8 +1,10 @@
 "use strict"
 
+require('file-loader?name=[name].[ext]!../index.html');
+
 import { leftPad } from "./leftpad_es6";
 
-const serNos = [ 6934, 23111, 23114, 1001, 211161];
+const serNos = [ 6934, 23111, 23114, 1001, 211161, 'abc' ];
 
 // const strSNos = serNos.map(sn => leftPad( sn, 8, '0' ) );
 
@@ -10,7 +12,7 @@ const serNos = [ 6934, 23111, 23114, 1001, 211161];
 
 const partEl = document.getElementById('part-list');
 
-let strList = "";
+let strList = '';
 
 serNos.forEach(element => {
   strList += `<li>${ leftPad(element, 8, '0') }</li>`;
